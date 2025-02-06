@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  background: url(bg.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 800px;
+  margin: 20px;
+}
+
+.container h1 {
+  font-family: "lobster";
+  color: #ffd3b6;
+  text-shadow: 10px 10px 4px hsla(0, 0%, 0%, 0.3);
+  -webkit-text-stroke: 0.5px #b71c1c;
+  font-size: 52px;
+  letter-spacing: 2px;
+}
+
+.container .tenor-gif-embed {
+  max-width: 200px;
+}
+
+.container big {
+  font-family: "lobster";
+  color: #b71c1c;
+  font-size: 36px;
+  letter-spacing: 1px;
+  text-shadow: 10px 10px 4px hsla(0, 0%, 0%, 0.3);
+}
+
+.container strong {
+  font-family: "concert one", sans-serif;
+  color: #b71c1c;
+  font-size: 28px;
+  font-weight: 500;
+  text-shadow: 10px 10px 4px hsla(0, 0%, 0%, 0.3);
+}
+
+.container h6 {
+  font-family: "concert one", sans-serif;
+  color: transparent;
+  font-size: 32px;
+  letter-spacing: 1px;
+  -webkit-text-stroke: 0.5px #ff7398;
+}
+
+.container .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+  gap: 30px;
+}
+
+.container .btn a {
+  background-color: transparent;
+  padding: 12px;
+  border: 2px solid #b71c1c;
+  border-radius: 8px;
+  box-shadow: 7px 7px 7px hsla(0, 0%, 0%, 0.3);
+  display: flex;
+  transition: 0.3s linear;
+}
+
+.container .btn a i {
+  color: #b71c1c;
+  font-size: 20px;
+  margin-right: 3px;
+}
+
+.container .btn .line {
+  width: 2.5px;
+  height: 22px;
+  margin: 0 5px;
+  border-radius: 20px;
+  background: #b71c1c;
+}
+
+.container .btn a small {
+  font-family: "poppins", sans-serif;
+  font-size: 16px;
+  margin-left: 3px;
+  color: #b71c1c;
+  font-weight: 500;
+}
+
+.container .btn a:hover {
+  background-color: #b71c1c;
+  border: 2px solid #ffd3b6;
+}
+
+.container .btn a:hover i {
+  color: #ffd3b6;
+}
+
+.container .btn a:hover .line {
+  background: #ffd3b6;
+}
+
+.container .btn a:hover small {
+  color: #ffd3b6;
+}
+
+.contain {
+  display: grid;
+  transform: translateY(60px);
+}
+
+.contain > .envelope-wrapper {
+  background-color: #ffccd9;
+  box-shadow: 0 0 4px hsla(0, 0%, 0%, 0.3);
+}
+
+.contain > .envelope-wrapper > .envelope {
+  position: relative;
+  width: 300px;
+  height: 230px;
+}
+
+.contain > .envelope-wrapper > .envelope::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  border-top: 130px solid #fcbbcc;
+  border-right: 150px solid transparent;
+  border-left: 150px solid transparent;
+  top: 0;
+  transform-origin: top;
+  transition: all 0.5s ease-in-out 0.7s;
+}
+
+.contain > .envelope-wrapper > .envelope::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  border-top: 130px solid transparent;
+  border-left: 150px solid #fba7bd;
+  border-right: 150px solid #fba7bd;
+  border-bottom: 100px solid #fba7bd;
+  bottom: 0;
+}
+
+.envelope .letter {
+  position: absolute;
+  right: 20%;
+  bottom: 50px;
+  width: 180px;
+  height: 165px;
+  background-color: #ffe5d3;
+  transition: all 1s ease-in-out;
+  padding: 15px;
+  z-index: 0;
+  box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.3);
+}
+
+.envelope .letter .text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.letter > .text {
+  text-align: left;
+}
+
+.text strong {
+  font-family: "lobster";
+  font-size: 18px;
+  color: rgb(199, 17, 17);
+  word-spacing: 1px;
+  letter-spacing: 1px;
+}
+
+.text p {
+  font-family: "poppins", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  color: #8d6e63;
+}
+
+.heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  background-color: #b71c1c;
+  z-index: 4;
+  transform: translate(-50%, -20%) rotate(45deg);
+  transition: transform 0.5s ease-in-out 1s;
+  box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.3);
+  cursor: pointer;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #b71c1c;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -7.5px;
+}
+
+.heart::after {
+  right: 7.5px;
+}
+
+.flap > .envelope::before {
+  z-index: 0;
+  transform: rotateX(180deg);
+}
+
+.flap > .envelope .letter {
+  bottom: 170px;
+  transform: scale(1.5);
+  transition-delay: 1s;
+  z-index: 3;
+}
+
+.flap > .heart {
+  transform: rotate(90deg);
+  transition-delay: 0.4s;
+}
+
+@media (min-width: 360px) and (max-width: 420px) {
+  .container {
+    max-width: 450px;
+  }
+  .container h1 {
+    font-size: 30px;
+  }
+  .container big {
+    font-size: 24px;
+  }
+  .container .btn {
+    gap: 15px;
+  }
+  .container .btn a {
+    padding: 10px;
+  }
+  .container .btn a i {
+    font-size: 15px;
+  }
+  .container .btn .line {
+    height: 17px;
+    width: 2px;
+  }
+  .container .btn a small {
+    font-size: 11px;
+  }
+}
